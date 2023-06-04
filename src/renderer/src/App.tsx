@@ -1,5 +1,5 @@
 export function App() {
   return (
-    <h1 className="text-violet-400 font-bold text-4xl">Hello world, Rotion</h1>
+    <h1 className="text-4xl font-bold text-violet-400">Hello world, Rotion</h1>
   )
 }
