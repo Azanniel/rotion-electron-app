@@ -1,3 +1,3 @@
 export function App() {
-  return <h1>Hello world, Rotion</h1>
+  return <h1 style={{ fontFamily: 'Inter' }}>Hello world, Rotion</h1>
 }
