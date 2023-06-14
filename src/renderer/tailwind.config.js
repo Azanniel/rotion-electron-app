@@ -8,6 +8,7 @@ module.exports = {
       fontFamily: {
         sans: 'Inter, sans-serif',
       },
+
       colors: {
         rotion: {
           50: '#ebeaed',
@@ -21,6 +22,23 @@ module.exports = {
           800: '#1e1a29',
           900: '#17141f',
         },
+      },
+
+      keyframes: {
+        slideIn: {
+          from: { with: 0 },
+          to: { width: 'var(--radix-collapsible-content-width)' },
+        },
+
+        slideOut: {
+          from: { width: 'var(--radix-collapsible-content-width)' },
+          to: { with: 0 },
+        },
+      },
+
+      animation: {
+        slideIn: 'slideIn 0.25s',
+        slideOut: 'slideOut 0.25s',
       },
     },
   },
