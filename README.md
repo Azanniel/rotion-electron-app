@@ -11,29 +11,37 @@ An Electron application with React and TypeScript
 ### Install
 
 ```bash
-$ npm install
+$ pnpm install
 ```
 
 ### Development
 
 ```bash
-$ npm run dev
+$ pnpm run dev
 ```
 
 ### Build
 
 ```bash
 # For windows
-$ npm run build:win
+$ pnpm run build:win
 
 # For macOS
-$ npm run build:mac
+$ pnpm run build:mac
 
 # For Linux
-$ npm run build:linux
+$ pnpm run build:linux
 ```
 
 ## Some useful Electron templates
 
 - [Electron Vite](https://evite.netlify.app/)
 - [Electron App](https://github.com/daltonmenezes/electron-app)
+
+## Some local database tips
+
+In certain applications you may want to use a local database to store the data on the user's computer.
+
+- [SQLite](https://www.sqlite.org/index.html)
+- [RxDB](https://rxdb.info/)
+- [Electron Store](https://www.npmjs.com/package/electron-store)
