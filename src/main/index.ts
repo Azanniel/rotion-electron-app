@@ -4,6 +4,7 @@ import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import { createFileRoute, createURLRoute } from 'electron-router-dom'
 
 import icon from '../../resources/icon.png'
+import './ipc'
 
 function createWindow() {
   // Create the browser window.

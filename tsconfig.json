@@ -29,7 +29,6 @@
   },
   "include": [
     "src",
-    "src/preload/index.d.ts",
     "electron.vite.config.*"
   ],
   "exclude": [
