@@ -34,6 +34,7 @@
     "cmdk": "^0.2.0",
     "electron-router-dom": "^1.0.5",
     "phosphor-react": "^1.4.1",
+    "react-query": "^3.39.3",
     "react-router-dom": "^6.12.1"
   },
   "devDependencies": {
