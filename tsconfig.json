@@ -25,7 +25,10 @@
         "./*"
       ],
       "@*": ["./src/*"],
-    }
+    },
+    "types": [
+      "electron-vite/node"
+    ],
   },
   "include": [
     "src",

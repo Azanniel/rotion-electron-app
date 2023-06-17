@@ -3,10 +3,12 @@ import { app, shell, BrowserWindow } from 'electron'
 import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import { createFileRoute, createURLRoute } from 'electron-router-dom'
 
-import icon from '../../resources/icon.png'
+import icon from '../../resources/icon.png?asset'
+import iconWin32 from '../../resources/icon.ico?asset'
 
 import './ipc'
 import './store'
+import './tray'
 
 function createWindow() {
   // Create the browser window.
@@ -21,7 +23,7 @@ function createWindow() {
       x: 20,
       y: 20,
     },
-    ...(process.platform === 'linux' ? { icon } : {}),
+    icon: process.platform === 'win32' ? iconWin32 : icon,
     webPreferences: {
       preload: path.join(__dirname, '../preload/index.js'),
       sandbox: false,
@@ -58,7 +60,7 @@ function createWindow() {
 
 if (process.platform === 'darwin') {
   // Change icon in macOS
-  app.dock.setIcon(path.resolve(__dirname, 'icon.png'))
+  app.dock.setIcon(icon)
 }
 
 // This method will be called when Electron has finished
