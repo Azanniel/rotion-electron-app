@@ -1,9 +1,11 @@
-import { Plus } from 'phosphor-react'
 import { useMutation, useQueryClient } from 'react-query'
+import { useNavigate } from 'react-router-dom'
+import { Plus } from 'phosphor-react'
 import { Document } from '@shared/types/ipc'
 
 export function CreatePage() {
   const queryClient = useQueryClient()
+  const navigate = useNavigate()
 
   const {
     isLoading: isCreatingNewDocument,
@@ -23,6 +25,8 @@ export function CreatePage() {
 
           return [...documents, data]
         })
+
+        navigate(`documents/${data.id}`)
       },
     },
   )
