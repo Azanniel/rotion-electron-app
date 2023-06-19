@@ -1,6 +1,8 @@
-import { useMutation, useQueryClient } from 'react-query'
+import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useMutation, useQueryClient } from 'react-query'
 import { Plus } from 'phosphor-react'
+
 import { Document } from '@shared/types/ipc'
 
 export function CreatePage() {
@@ -30,6 +32,18 @@ export function CreatePage() {
       },
     },
   )
+
+  useEffect(() => {
+    function onNewDocument() {
+      handleCreateDocument()
+    }
+
+    const unsubscribe = window.api.onNewDocumentRequest(onNewDocument)
+
+    return () => {
+      unsubscribe()
+    }
+  }, [handleCreateDocument])
 
   return (
     <button

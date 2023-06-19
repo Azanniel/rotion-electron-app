@@ -1,10 +1,9 @@
 import { contextBridge } from 'electron'
-import { ElectronAPI, electronAPI } from '@electron-toolkit/preload'
+import { electronAPI } from '@electron-toolkit/preload'
 import { api } from './api'
 
 declare global {
   export interface Window {
-    electron: ElectronAPI
     api: typeof api
   }
 }
@@ -14,7 +13,6 @@ declare global {
 // just add to the DOM global.
 if (process.contextIsolated) {
   try {
-    contextBridge.exposeInMainWorld('electron', electronAPI)
     contextBridge.exposeInMainWorld('api', api)
   } catch (error) {
     console.error(error)

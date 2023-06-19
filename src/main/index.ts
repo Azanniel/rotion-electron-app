@@ -3,12 +3,14 @@ import { app, shell, BrowserWindow } from 'electron'
 import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import { createFileRoute, createURLRoute } from 'electron-router-dom'
 
+import { createTray } from './tray'
+import { createShortcuts } from './shortcuts'
+
 import icon from '../../resources/icon.png?asset'
 import iconWin32 from '../../resources/icon.ico?asset'
 
 import './ipc'
 import './store'
-import './tray'
 
 function createWindow() {
   // Create the browser window.
@@ -29,6 +31,9 @@ function createWindow() {
       sandbox: false,
     },
   })
+
+  createTray(mainWindow)
+  createShortcuts(mainWindow)
 
   mainWindow.on('ready-to-show', () => {
     mainWindow.show()
