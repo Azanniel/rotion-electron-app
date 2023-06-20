@@ -1,8 +1,9 @@
-name: Build/release Electron app
-
 on:
   push:
     tags: ["*"]
+
+permissions:
+  contents: write
 
 jobs:
   release:
@@ -52,5 +53,6 @@ jobs:
             dist/*.tar.gz
             dist/*.yml
             dist/*.blockmap
+          token: ${{ secrets.GITHUB_TOKEN }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
