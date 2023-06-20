@@ -34,7 +34,6 @@ linux:
     - deb
     - rpm
     - pacman
-    - freebsb
   maintainer: electronjs.org
   synopsis: ${description}
   category: Utility
