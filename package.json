@@ -1,11 +1,11 @@
 {
   "name": "rotion",
   "productName": "Rotion",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A Notion alternative written with Electron",
   "main": "./out/main/index.js",
-  "author": "example.com",
-  "homepage": "https://www.electronjs.org",
+  "author": "Leandro Azanniel",
+  "homepage": "https://github.com/Azanniel/rotion-electron-app",
   "scripts": {
     "format": "prettier --write .",
     "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",

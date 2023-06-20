@@ -11,7 +11,6 @@ files:
   - '!{tsconfig.json,tsconfig.node.json,tsconfig.web.json}'
 asarUnpack:
   - resources/**
-# afterSign: build/notarize.js
 win:
   executableName: rotion
 nsis:
@@ -34,7 +33,7 @@ linux:
     - deb
     - rpm
     - pacman
-  maintainer: electronjs.org
+  maintainer: https://github.com/Azanniel/rotion-electron-app
   synopsis: ${description}
   category: Utility
 appImage:
